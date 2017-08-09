@@ -426,6 +426,11 @@
                    <div class="content-data">
 
 <h1 id="ngx-upload">Ngx-upload</h1>
+<p><a href="https://travis-ci.org/wkoza/ocLazyLoad"><img src="https://travis-ci.org/wKoza/ngx-upload.svg" alt="Build Status" class="img-responsive"></a>
+<a href="https://codecov.io/gh/wKoza/ngx-upload"><img src="https://codecov.io/gh/wKoza/ngx-upload/branch/master/graph/badge.svg" alt="codecov" class="img-responsive"></a>
+<a href="https://badge.fury.io/js/%40wkoza%2Fngx-upload"><img src="https://badge.fury.io/js/%40wkoza%2Fngx-upload.svg" alt="npm version" class="img-responsive"></a>
+<a href="https://david-dm.org/wKoza/ngx-upload?type=dev"><img src="https://david-dm.org/wKoza/ngx-upload/dev-status.svg" alt="devDependency Status" class="img-responsive"></a>
+<a href="https://raw.githubusercontent.com/wKoza/ngx-upload/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" class="img-responsive"></a></p>
 <h2 id="demo">Demo</h2>
 <p><a href="https://ngx-upload.github.io">https://ngx-upload.github.io</a></p>
 <h2 id="table-of-contents">Table of contents</h2>
@@ -437,10 +442,13 @@
 <li><a href="#license">License</a></li>
 </ul>
 <h2 id="about">About</h2>
-<p>Ngx-upload is a module for the Angular framework. Ngx-upload supports drag and drop, upload progress and manages a file upload queue.</p>
+<p>Ngx-upload is a module for the Angular framework. Ngx-upload supports drag and drop, upload progress and manages a file upload queue for you.
+Ngx-upload is bound to anyone presentation framework but you can use it with ng(x)-bootstrap or Angular Material Design without any problems.</p>
 <h2 id="installation">Installation</h2>
 <p>Install through npm:</p>
-<pre class="line-numbers"><code class="language-none">npm install --save &#64;wkoza/ngx-upload</code></pre><p>Then include in your apps module:</p>
+<pre class="line-numbers"><code class="language-none">npm install &#64;wkoza/ngx-upload</code></pre><p>OR</p>
+<pre class="line-numbers"><code class="language-none">yarn add &#64;wkoza/ngx-upload</code></pre><h2 id="setup">Setup</h2>
+<p>Just include ngx-upload in your module with <code>FormsModule</code> or <code>ReactiveFormsModule</code>:</p>
 <pre class="line-numbers"><code class="language-typescript">import {BrowserModule} from &#39;&#64;angular/platform-browser&#39;;
 import {NgModule} from &#39;&#64;angular/core&#39;;
 import {FormsModule} from &#39;&#64;angular/forms&#39;;
@@ -449,136 +457,86 @@ import {NgxUploadModule} from &#39;&#64;wkoza/ngx-upload&#39;;
 &#64;NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule, // or ReactiveFormsModule
     NgxUploadModule.forRoot()
   ]
 })
-export class AppModule {}</code></pre><p>Finally use in one of your apps components:</p>
-<pre class="line-numbers"><code class="language-typescript">import { Component } from &#39;&#64;angular/core&#39;;
+export class AppModule {}</code></pre><p>Ngx-upload become with a mock configuration. In a real application, you must configure by declaring the configuration object <code>UploadOptions</code> like this :</p>
+<pre class="line-numbers"><code class="language-typescript">import {BrowserModule} from &#39;&#64;angular/platform-browser&#39;;
+import {NgModule} from &#39;&#64;angular/core&#39;;
+import {FormsModule} from &#39;&#64;angular/forms&#39;;
+import {NgxUploadModule} from &#39;&#64;wkoza/ngx-upload&#39;;
 
-&#64;Component({
-  template: `
-  &lt;div style=&quot;margin-left: 15px; margin-right: 15px; margin-top: 60px&quot;&gt;
-  &lt;h1&gt;Simple upload example with Bootstrap&lt;/h1&gt;
-  &lt;hr&gt;
+const uploadOptions: UploadOptions = {
+  method : &#39;POST&#39;,
+  url: &#39;your_backend_upload_url&#39;
+};
 
-  &lt;form #myForm=&quot;ngForm&quot;&gt;
-  &lt;div class=&quot;form-group row&quot;&gt;
-    &lt;label class=&quot;col-2 col-form-label&quot;&gt;Name&lt;/label&gt;
-    &lt;div class=&quot;col-10&quot;&gt;
-      &lt;input class=&quot;form-control&quot; type=&quot;text&quot; [(ngModel)]=&quot;model.name&quot; name=&quot;name&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;form-group row&quot;&gt;
-    &lt;label class=&quot;col-2 col-form-label&quot;&gt;Email&lt;/label&gt;
-    &lt;div class=&quot;col-10&quot;&gt;
-      &lt;input class=&quot;form-control&quot; type=&quot;email&quot; [(ngModel)]=&quot;model.email&quot; name=&quot;email&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;/form&gt;
-
-  &lt;div class=&quot;form-group row&quot;&gt;
-    &lt;div class=&quot;col-md-3&quot;&gt;
-      &lt;h3&gt;Add files&lt;/h3&gt;
-      &lt;div&gt;
-        &lt;div class=&quot;well my-drop-zone&quot; ngxDragAndDrop (onDrop)=&quot;onDrop($event)&quot; [formBinded]=&quot;myForm&quot;&gt;
-          Drop files here to upload
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;col-md-9&quot; style=&quot;margin-bottom: 40px&quot;&gt;
-      &lt;h3&gt;Upload queue &lt;span *ngIf=&quot;uploader.queue.length&gt;0&quot;&gt; - {{ uploader.queue.length }} item(s)&lt;/span&gt;&lt;/h3&gt;
-
-      &lt;div class=&quot;card text-right&quot;&gt;
-        &lt;div style=&quot;margin: 15px&quot;&gt;
-          &lt;ngb-progressbar showValue=&quot;true&quot; type=&quot;success&quot; [striped]=&quot;true&quot; [animated]=&quot;true&quot;
-                           [value]=&quot;uploader.progress&quot;&gt;&lt;/ngb-progressbar&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;card-block&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-success btn-s&quot; (click)=&quot;uploader.uploadAll()&quot;
-                  [disabled]=&quot;!uploader.getNotUploadedItems().length&quot;&gt;
-            Upload all
-          &lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-warning btn-s&quot; (click)=&quot;uploader.cancelAll()&quot;
-                  [disabled]=&quot;!uploader.isUploading || !uploader.queue.length&quot;&gt;
-             Cancel all
-          &lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-danger btn-s&quot; (click)=&quot;uploader.removeAllFromQueue()&quot;
-                  [disabled]=&quot;!uploader.getNotUploadedItems().length&quot;&gt;
-             Remove all
-          &lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;card&quot; style=&quot;margin-top: 20px&quot;&gt;
-
-        &lt;table class=&quot;table&quot; style=&quot;font-size: 14px&quot;&gt;
-          &lt;thead&gt;
-          &lt;tr&gt;
-            &lt;th width=&quot;50%&quot;&gt;Name&lt;/th&gt;
-            &lt;th&gt;Size&lt;/th&gt;
-            &lt;th&gt;Progress&lt;/th&gt;
-            &lt;th&gt;Actions&lt;/th&gt;
-          &lt;/tr&gt;
-          &lt;/thead&gt;
-          &lt;tbody&gt;
-          &lt;tr *ngFor=&quot;let itemFile of uploader.queue&quot;
-              [ngClass]=&quot;{&#39;table-success&#39; : itemFile.isSuccess, &#39;table-danger&#39; : itemFile.isError, &#39;table-warning&#39; : itemFile.isUploading  }&quot;&gt;
-            &lt;td&gt;{{ itemFile.file.name }}&lt;/td&gt;
-            &lt;td&gt;{{ itemFile.file.size/1024/1024 | number:&#39;1.0-2&#39; }} MB&lt;/td&gt;
-            &lt;td&gt;
-              &lt;div&gt;
-                &lt;ngb-progressbar type=&quot;success&quot; showValue=&quot;true&quot; [striped]=&quot;true&quot; [animated]=&quot;true&quot;
-                                 [value]=&quot;itemFile.progress&quot;&gt;&lt;/ngb-progressbar&gt;
-              &lt;/div&gt;
-            &lt;/td&gt;
-            &lt;td style=&quot;text-align: center&quot;&gt;
-              &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-success btn-sm&quot; (click)=&quot;itemFile.upload()&quot;
-                      [disabled]=&quot;itemFile.isReady || itemFile.isUploading || itemFile.isSuccess&quot;&gt;
-                 Upload
-              &lt;/button&gt;
-              &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-warning btn-sm&quot; (click)=&quot;itemFile.cancel()&quot;
-                      [disabled]=&quot;!itemFile.isUploading&quot;&gt;
-               Cancel
-              &lt;/button&gt;
-              &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-danger btn-sm&quot; (click)=&quot;itemFile.remove()&quot;
-                      [disabled]=&quot;itemFile.isUploaded&quot;&gt;
-                Remove
-              &lt;/button&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/div&gt;
-
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;/div&gt;
-
-  `
+&#64;NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule, // or ReactiveFormsModule
+    NgxUploadModule.forRoot(uploadOptions)
+  ]
 })
-export class MyComponent {}</code></pre><p>You may also find it useful to view the <a href="https://github.com/wKoza/ngx-upload/tree/master/demo/src/app">demo source</a>.</p>
-<h3 id="usage-without-a-module-bundler">Usage without a module bundler</h3>
-<pre class="line-numbers"><code class="language-none">&lt;script src=&quot;node_modules/&#64;wkoza/ngx-upload/bundles/ngx-upload.umd.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-    // everything is exported ngx-upload namespace
-&lt;/script&gt;</code></pre><h2 id="documentation">Documentation</h2>
+export class AppModule {}</code></pre><p>Ngx-upload also proposes to configure the drop zone aspect. Then, you can change the css class of your drop zone regarding the drop event:</p>
+<ul>
+<li>When you drag a file</li>
+<li>When you drop a file</li>
+<li>In other cases</li>
+</ul>
+<p>For this, you should add the configuration object <code>DropTargetOptions</code> like this :</p>
+<pre class="line-numbers"><code class="language-typescript">import {BrowserModule} from &#39;&#64;angular/platform-browser&#39;;
+import {NgModule} from &#39;&#64;angular/core&#39;;
+import {FormsModule} from &#39;&#64;angular/forms&#39;;
+import {NgxUploadModule} from &#39;&#64;wkoza/ngx-upload&#39;;
+
+const uploadOptions: UploadOptions = {
+  method : &#39;POST&#39;,
+  url: &#39;your_backend_upload_url&#39;
+};
+
+export const ngxDropTargetOptions: DropTargetOptions = {
+  color: &#39;dropZoneColor&#39;,
+  colorDrag: &#39;dropZoneColorDrag&#39;,
+  colorDrop: &#39;dropZoneColorDrop&#39;
+};
+
+&#64;NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule, // or ReactiveFormsModule
+    NgxUploadModule.forRoot(uploadOptions, ngxDropTargetOptions)
+  ]
+})
+export class AppModule {}</code></pre><p>In this example, you should also declare these css classes in your own css :</p>
+<pre class="line-numbers"><code class="language-css">
+.dropZoneColor {
+  border: 3px dotted rgba(0,0,0,0.08);
+  background-color: rgba(0,0,0,0.12)
+}
+
+.dropZoneColorDrag {
+  border: 3px dotted rgba(0,0,0,0.28);
+  background-color: grey
+}
+
+.dropZoneColorDrop {
+  border: 3px dotted rgba(0,0,0,0.08);
+  background-color: rgba(0,0,0,0.12)
+}</code></pre><h2 id="usage">Usage</h2>
+<h3 id="drop-zone">Drop zone</h3>
+<p>Ngx-upload offers one directive for your drop zone called <code>ngxDragAndDrop</code>. It allows to add the files in the upload queue. During the drop event, it throws an event called <code>onDrop</code> that you can catch :</p>
+<pre class="line-numbers"><code class="language-html">&lt;div class=&quot;my-drop-zone&quot; ngxDragAndDrop (onDrop)=&quot;onDrop($event)&quot; [formBinded]=&quot;myForm&quot;&gt;
+        Drop files here to upload
+&lt;/div&gt;</code></pre><p>To finish, we can overwrite the <code>DropTargetOptions</code> for a specific case due to property binding :</p>
+<pre class="line-numbers"><code class="language-html">&lt;div class=&quot;my-drop-zone&quot; [ngxDragAndDrop]=&quot;options&quot; (onDrop)=&quot;onDrop($event)&quot; [formBinded]=&quot;myForm&quot;&gt;
+        Drop files here to upload
+&lt;/div&gt;</code></pre><h3 id="upload-queue">Upload queue</h3>
+<p>Each file is added to a queue that you can manage with <code>uploader</code> service. Take a look at <a href="https://github.com/wKoza/ngx-upload/tree/master/demo/src/app">those examples</a> for more details :</p>
+<h2 id="documentation">Documentation</h2>
 <p>All documentation is auto-generated from the source via <a href="https://compodoc.github.io/compodoc/">compodoc</a> and can be viewed here:
 <a href="https://ngx-upload.github.io/docs/">https://ngx-upload.github.io/docs/</a></p>
-<h2 id="development">Development</h2>
-<h3 id="prepare-your-environment">Prepare your environment</h3>
-<ul>
-<li>Install <a href="http://nodejs.org/">Node.js</a> and NPM</li>
-<li>Install local dev dependencies: <code>npm install</code> while current directory is this repo</li>
-</ul>
-<h3 id="development-server">Development server</h3>
-<p>Run <code>npm start</code> to start a development server on port 8000 with auto reload + tests.</p>
-<h3 id="testing">Testing</h3>
-<p>Run <code>npm test</code> to run tests once or <code>npm run test:watch</code> to continually run tests.</p>
-<h3 id="release">Release</h3>
-<ul>
-<li>Bump the version in package.json (once the module hits 1.0 this will become automatic)<pre class="line-numbers"><code class="language-bash">npm run release</code></pre></li>
-</ul>
 <h2 id="license">License</h2>
 <p>MIT</p>
 
