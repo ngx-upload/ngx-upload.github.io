@@ -586,6 +586,9 @@
                             <td class="col-md-4">
                                 <ul class="index-list">
                                     <li>
+                                         <a href="#cancelFileItem">cancelFileItem</a>
+                                    </li>
+                                    <li>
                                          <a href="#uploadFileItem">uploadFileItem</a>
                                     </li>
                                 </ul>
@@ -656,6 +659,67 @@
                     <h3 id="methods">
                         Methods
                     </h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="cancelFileItem"></a>
+                                    <span class="name"><b> cancelFileItem</b><a href="#cancelFileItem"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>cancelFileItem(fileItem: <a href="../classes/FileItem.html">FileItem</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">test/mocks/httpClientUpload.service.mock.ts:23</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>fileItem</td>
+                                                              <td>
+                                                                      <code><a href="../classes/FileItem.html" target="_self" >FileItem</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
@@ -753,6 +817,10 @@ export class HttpClientUploadServiceMock extends AbstractUploadService {
 
     uploadFileItem(fileItem: FileItem, options?: any): Observable&lt;any&gt; {
         return Observable.empty();
+    }
+
+    cancelFileItem(fileItem: FileItem) {
+
     }
 
 }

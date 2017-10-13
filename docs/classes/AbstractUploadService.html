@@ -596,9 +596,6 @@
                                         <span class="modifier">Protected</span> <a href="#headers">headers</a>
                                     </li>
                                     <li>
-                                         <a href="#isUploading">isUploading</a>
-                                    </li>
-                                    <li>
                                          <a href="#method">method</a>
                                     </li>
                                     <li>
@@ -646,13 +643,10 @@
                                          <a href="#cancelAll">cancelAll</a>
                                     </li>
                                     <li>
-                                         <a href="#cancelFileItem">cancelFileItem</a>
+                                        <span class="modifier"></span> <a href="#cancelFileItem">cancelFileItem</a>
                                     </li>
                                     <li>
-                                        <span class="modifier">Public</span> <a href="#getNotUploadedItems">getNotUploadedItems</a>
-                                    </li>
-                                    <li>
-                                         <a href="#getTotalProgress">getTotalProgress</a>
+                                         <a href="#computeTotalProgress">computeTotalProgress</a>
                                     </li>
                                     <li>
                                         <span class="modifier">Protected</span> <a href="#onBeforeUploadItem">onBeforeUploadItem</a>
@@ -696,7 +690,7 @@
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/services/abstractUpload.service.ts:28</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/services/abstractUpload.service.ts:26</a></div>
                                         </td>
                                     </tr>
             
@@ -763,7 +757,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/services/abstractUpload.service.ts:43</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/services/abstractUpload.service.ts:41</a></div>
                                         </td>
                                     </tr>
             
@@ -836,7 +830,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/services/abstractUpload.service.ts:92</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/services/abstractUpload.service.ts:83</a></div>
                                         </td>
                                     </tr>
             
@@ -858,19 +852,20 @@
                             <tr>
                                 <td class="col-md-4">
                                     <a name="cancelFileItem"></a>
-                                    <span class="name"><b> cancelFileItem</b><a href="#cancelFileItem"><span class="fa fa-link"></span></a></span>
+                                    <span class="name"><b><span class="modifier"></span> cancelFileItem</b><a href="#cancelFileItem"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-            <code>cancelFileItem(fileItem: <a href="../classes/FileItem.html">FileItem</a>)</code>
+                                        <span class="modifier-icon fa fa-reset"></span>
+                                    <code>cancelFileItem(fileItem: <a href="../classes/FileItem.html">FileItem</a>)</code>
                                 </td>
                             </tr>
             
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/services/abstractUpload.service.ts:66</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/services/abstractUpload.service.ts:64</a></div>
                                         </td>
                                     </tr>
             
@@ -918,60 +913,20 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <a name="getNotUploadedItems"></a>
-                                    <span class="name"><b><span class="modifier">Public</span> getNotUploadedItems</b><a href="#getNotUploadedItems"><span class="fa fa-link"></span></a></span>
+                                    <a name="computeTotalProgress"></a>
+                                    <span class="name"><b> computeTotalProgress</b><a href="#computeTotalProgress"><span class="fa fa-link"></span></a></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                        <span class="modifier-icon fa fa-reset"></span>
-                                    <code>getNotUploadedItems()</code>
+            <code>computeTotalProgress()</code>
                                 </td>
                             </tr>
             
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/services/abstractUpload.service.ts:131</a></div>
-                                        </td>
-                                    </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>Returns not uploaded items</p>
-            </div>
-            
-                                        <div>
-                                        </div>
-                                        <div class="io-description">
-                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-            
-                                        </div>
-                                            <div class="io-description">
-                                                
-                                            </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="getTotalProgress"></a>
-                                    <span class="name"><b> getTotalProgress</b><a href="#getTotalProgress"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-            <code>getTotalProgress(value?: )</code>
-                                </td>
-                            </tr>
-            
-            
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="142" class="link-to-prism">src/services/abstractUpload.service.ts:142</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">src/services/abstractUpload.service.ts:128</a></div>
                                         </td>
                                     </tr>
             
@@ -980,34 +935,10 @@
                                         <div class="io-description"><p>Returns the total progress</p>
             </div>
             
-                                        <div class="io-description">
-                                                <b>Parameters :</b>
-                                                <table class="params">
-                                                    <thead>
-                                                        <tr>
-                                                            <td>Name</td>
-                                                            <td>Type</td>
-                                                            <td>Optional</td>
-                                                            <td>Description</td>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                            <tr>
-                                                              <td>value</td>
-                                                              <td>
-                                                              </td>
-                                                              <td>
-                                                                  true
-                                                              </td>
-                                                              <td></td>
-                                                            </tr>
-                                                    </tbody>
-                                                </table>
-                                        </div>
                                         <div>
                                         </div>
                                         <div class="io-description">
-                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
             
                                         </div>
                                             <div class="io-description">
@@ -1035,7 +966,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="159" class="link-to-prism">src/services/abstractUpload.service.ts:159</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">src/services/abstractUpload.service.ts:146</a></div>
                                         </td>
                                     </tr>
             
@@ -1099,7 +1030,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="182" class="link-to-prism">src/services/abstractUpload.service.ts:182</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="169" class="link-to-prism">src/services/abstractUpload.service.ts:169</a></div>
                                         </td>
                                     </tr>
             
@@ -1190,7 +1121,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="170" class="link-to-prism">src/services/abstractUpload.service.ts:170</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="157" class="link-to-prism">src/services/abstractUpload.service.ts:157</a></div>
                                         </td>
                                     </tr>
             
@@ -1263,7 +1194,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">src/services/abstractUpload.service.ts:193</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="180" class="link-to-prism">src/services/abstractUpload.service.ts:180</a></div>
                                         </td>
                                     </tr>
             
@@ -1353,7 +1284,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">src/services/abstractUpload.service.ts:106</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/services/abstractUpload.service.ts:98</a></div>
                                         </td>
                                     </tr>
             
@@ -1387,7 +1318,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">src/services/abstractUpload.service.ts:117</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/services/abstractUpload.service.ts:109</a></div>
                                         </td>
                                     </tr>
             
@@ -1448,7 +1379,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/services/abstractUpload.service.ts:78</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/services/abstractUpload.service.ts:69</a></div>
                                         </td>
                                     </tr>
             
@@ -1483,7 +1414,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/services/abstractUpload.service.ts:63</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/services/abstractUpload.service.ts:61</a></div>
                                         </td>
                                     </tr>
             
@@ -1527,7 +1458,7 @@
                                         <div>
                                         </div>
                                         <div class="io-description">
-                                            <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
             
                                         </div>
                                             <div class="io-description">
@@ -1567,7 +1498,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/services/abstractUpload.service.ts:16</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/services/abstractUpload.service.ts:14</a></div>
                                         </td>
                                     </tr>
             
@@ -1596,7 +1527,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/services/abstractUpload.service.ts:22</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/services/abstractUpload.service.ts:20</a></div>
                                         </td>
                                     </tr>
             
@@ -1606,35 +1537,6 @@
             </div>
                                 </td>
                             </tr>
-            
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <a name="isUploading"></a>
-                                    <span class="name"><b> isUploading</b><a href="#isUploading"><span class="fa fa-link"></span></a></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <code>isUploading:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-            </code>
-                                </td>
-                            </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-            
-                                    </td>
-                                </tr>
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/services/abstractUpload.service.ts:12</a></div>
-                                        </td>
-                                    </tr>
-            
             
                         </tbody>
                     </table>
@@ -1660,7 +1562,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/services/abstractUpload.service.ts:14</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/services/abstractUpload.service.ts:12</a></div>
                                         </td>
                                     </tr>
             
@@ -1683,7 +1585,7 @@
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/services/abstractUpload.service.ts:27</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/services/abstractUpload.service.ts:25</a></div>
                                         </td>
                                     </tr>
             
@@ -1706,7 +1608,7 @@
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/services/abstractUpload.service.ts:24</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/services/abstractUpload.service.ts:22</a></div>
                                         </td>
                                     </tr>
             
@@ -1729,7 +1631,7 @@
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/services/abstractUpload.service.ts:25</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/services/abstractUpload.service.ts:23</a></div>
                                         </td>
                                     </tr>
             
@@ -1752,7 +1654,7 @@
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/services/abstractUpload.service.ts:28</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/services/abstractUpload.service.ts:26</a></div>
                                         </td>
                                     </tr>
             
@@ -1775,7 +1677,7 @@
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/services/abstractUpload.service.ts:26</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/services/abstractUpload.service.ts:24</a></div>
                                         </td>
                                     </tr>
             
@@ -1803,7 +1705,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/services/abstractUpload.service.ts:13</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/services/abstractUpload.service.ts:11</a></div>
                                         </td>
                                     </tr>
             
@@ -1832,7 +1734,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/services/abstractUpload.service.ts:11</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/services/abstractUpload.service.ts:10</a></div>
                                         </td>
                                     </tr>
             
@@ -1861,7 +1763,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/services/abstractUpload.service.ts:15</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/services/abstractUpload.service.ts:13</a></div>
                                         </td>
                                     </tr>
             
@@ -1890,7 +1792,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/services/abstractUpload.service.ts:17</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/services/abstractUpload.service.ts:15</a></div>
                                         </td>
                                     </tr>
             
@@ -1903,7 +1805,6 @@
 
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import { FileItem } from &#x27;./fileItem.model&#x27;;
-import { Observable } from &#x27;rxjs/Observable&#x27;;
 import { FormGroup } from &#x27;@angular/forms&#x27;;
 import { NgxUploadLogger } from &#x27;../utils/logger.model&#x27;;
 import { Method, UploadOptions } from &#x27;../utils/configuration.model&#x27;;
@@ -1913,7 +1814,6 @@ import { Subject } from &#x27;rxjs/Subject&#x27;;
 export abstract class AbstractUploadService {
 
     queue: FileItem[];
-    isUploading: boolean;
     progressTotal &#x3D; 0;
     method: Method;
     url: string;
@@ -1932,9 +1832,9 @@ export abstract class AbstractUploadService {
     public onProgress$ &#x3D; new Subject&lt;{ item: FileItem, progress: number }&gt;(); // https://embed.plnkr.co/P8xCEwSKgcOg07pwDrlO/
 
 
+
     constructor(protected logger: NgxUploadLogger, options: UploadOptions) {
         this.queue &#x3D; new Array&lt;FileItem&gt;();
-        this.isUploading &#x3D; false;
         this.method &#x3D; options.method !;
         this.url &#x3D; options.url;
         this.headers &#x3D; new Map();
@@ -1964,23 +1864,16 @@ export abstract class AbstractUploadService {
     }
 
 
-    abstract uploadFileItem(fileItem: FileItem, options?: any): Observable&lt;any&gt;;
+    abstract uploadFileItem(fileItem: FileItem, options?: any): void;
 
 
-    cancelFileItem(fileItem: FileItem) {
-        fileItem.isCancel &#x3D; true;
-        if (fileItem.isUploading) {
-            fileItem.ɵxhr.abort();
-        }
-        fileItem.ɵonCancel(fileItem.ɵxhr.response, fileItem.ɵxhr.status, fileItem.ɵxhr.response.headers);
-        this.onCancel$.next(fileItem)
-    }
+    abstract cancelFileItem(fileItem: FileItem): void;
 
     /**
      * Uploads all not uploaded items of queue
      */
     uploadAll() {
-        const items &#x3D; this.getNotUploadedItems().filter(item &#x3D;&gt; !item.isUploading);
+        const items &#x3D; this.queue.filter(item &#x3D;&gt; (item.isReady));
         if (!items.length) {
             return;
         }
@@ -1994,7 +1887,7 @@ export abstract class AbstractUploadService {
      * Uploads all not uploaded items of queue
      */
     cancelAll() {
-        const items: FileItem[] &#x3D; this.getNotUploadedItems();
+        const items: FileItem[] &#x3D; this.queue.filter(item &#x3D;&gt; (item.uploadInProgress));
         if (!items.length) {
             return;
         }
@@ -2002,13 +1895,14 @@ export abstract class AbstractUploadService {
         for (const item of items) {
             item.cancel();
         }
+        this.progressTotal &#x3D; this.computeTotalProgress();
     }
 
     /**
      * Uploads all not uploaded items of queue
      */
     removeAllFromQueue() {
-        const items: FileItem[] &#x3D; this.getNotUploadedItems();
+        const items: FileItem[] &#x3D; this.queue.filter(item &#x3D;&gt; (!item.uploadInProgress &amp;&amp; !item.isSuccess));
         if (!items.length) {
             return;
         }
@@ -2021,20 +1915,14 @@ export abstract class AbstractUploadService {
     removeFromQueue(fileItem: FileItem) {
         const index &#x3D; this.queue.indexOf(fileItem);
         const item &#x3D; this.queue[index];
-        if (item.isUploading) {
+        if (item.uploadInProgress) {
             item.cancel();
         }
         this.queue.splice(index, 1);
-        this.progressTotal &#x3D; this.getTotalProgress();
+        this.progressTotal &#x3D; this.computeTotalProgress();
     }
 
-    /**
-     * Returns not uploaded items
-     * @returns {Array}
-     */
-    public getNotUploadedItems() {
-        return this.queue.filter(item &#x3D;&gt; !item.isUploaded);
-    }
+
 
 
     /**
@@ -2043,16 +1931,17 @@ export abstract class AbstractUploadService {
      * @returns {Number}
      * @private
      */
-    getTotalProgress(value?) {
-
-        const notUploaded &#x3D; this.getNotUploadedItems().length;
-        const uploaded &#x3D; notUploaded ? this.queue.length - notUploaded : this.queue.length;
-        const ratio &#x3D; 100 / this.queue.length;
-        const current &#x3D; (value || 0) * ratio / 100;
-
-        this.logger.info(&#x27;getTotalProgress : &#x27; + Math.round(uploaded * ratio + current));
-
-        return Math.round(uploaded * ratio + current);
+    computeTotalProgress(): number {
+        let totalCurrent &#x3D; 0;
+        let total &#x3D; 0;
+        for (const item of this.queue) {
+            if (item.uploadInProgress || item.isSuccess) {
+                totalCurrent +&#x3D; (item.file.size / 100) * item.progress || 0;
+                total +&#x3D; item.file.size;
+                console.log(totalCurrent + &#x27; / &#x27; + total);
+            }
+        }
+        return Math.round((totalCurrent * 100) / total);
     }
 
 
@@ -2073,7 +1962,7 @@ export abstract class AbstractUploadService {
      */
     protected onProgressItem(item: FileItem, progress: number): void {
         this.logger.info(&#x60;call onProgressItem ${item} ${progress}&#x60;);
-        this.progressTotal &#x3D; this.getTotalProgress(progress);
+        this.progressTotal &#x3D; this.computeTotalProgress();
         item.ɵonProgress(progress);
         this.onProgress$.next({item, progress});
     }
@@ -2085,7 +1974,7 @@ export abstract class AbstractUploadService {
      */
     protected onError(item: FileItem, body: any, status: number, headers: any) {
         this.logger.info(&#x60;call onError ${item} ${body} ${status} ${headers}&#x60;);
-        item.ɵonError(body, status, headers);
+        item.ɵonError();
         this.onError$.next({item, body, status, headers});
     }
 
@@ -2094,9 +1983,10 @@ export abstract class AbstractUploadService {
      * @param item
      * @param xhr
      */
-    protected onSuccess(item: FileItem, body: any, status: number, headers: any) { // TODO headers n&#x27;est pas any
+    protected onSuccess(item: FileItem, body: any, status: number, headers: any) { // TODO headers is not any
         this.logger.info(&#x60;call onSuccess ${item} ${body} ${status} ${headers}&#x60;);
-        item.ɵonSuccess(body, status, headers);
+        this.progressTotal &#x3D; this.computeTotalProgress();
+        item.ɵonSuccess();
         this.onSuccess$.next({item, body, status, headers});
     }
 
