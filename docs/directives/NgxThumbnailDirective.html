@@ -102,7 +102,7 @@
                                     <a href="../directives/NgxInputFileDirective.html" >NgxInputFileDirective</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../directives/NgxThumbnailDirective.html" >NgxThumbnailDirective</a>
+                                    <a href="../directives/NgxThumbnailDirective.html"  class="active" >NgxThumbnailDirective</a>
                                 </li>
                         </ul>
                     </li>
@@ -131,7 +131,7 @@
                                     <a href="../classes/NgxUploadLogger.html" >NgxUploadLogger</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../classes/NoOpLogger.html"  class="active" >NoOpLogger</a>
+                                    <a href="../classes/NoOpLogger.html" >NoOpLogger</a>
                                 </li>
                         </ul>
                     </li>
@@ -288,7 +288,7 @@
                                            <a href="../directives/NgxInputFileDirective.html" >NgxInputFileDirective</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../directives/NgxThumbnailDirective.html" >NgxThumbnailDirective</a>
+                                           <a href="../directives/NgxThumbnailDirective.html"  class="active" >NgxThumbnailDirective</a>
                                        </li>
                                </ul>
                            </li>
@@ -317,7 +317,7 @@
                                            <a href="../classes/NgxUploadLogger.html" >NgxUploadLogger</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../classes/NoOpLogger.html"  class="active" >NoOpLogger</a>
+                                           <a href="../classes/NoOpLogger.html" >NoOpLogger</a>
                                        </li>
                                </ul>
                            </li>
@@ -386,17 +386,14 @@
                    
                    </nav>
                </div>
-               <div class="content class">
+               <div class="content directive">
                    <div class="content-data">
 
 
 
-
-
-
 <ol class="breadcrumb">
-  <li>Classes</li>
-  <li>NoOpLogger</li>
+  <li>Directives</li>
+  <li>NgxThumbnailDirective</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -414,17 +411,65 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/utils/logger.model.ts</code>
+            <code>src/directives/thumbnail.directive.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Simple service for logging the module.</p>
+                <p>Transforms a node into a thumbnail zone.</p>
 
             </p>
 
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">selector</td>
+                        <td class="col-md-9"><code>[ngxThumbnail]</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+                <h3 id="inputs">Inputs</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-2">
+                                    <code>ngxThumbnail</code>
+                                </td>
+                                <td class="col-md-10">
+                                      <p>
+                                        <em>Type:</em>    <code><a href="../classes/FileItem.html" target="_self" >FileItem</a></code>
+
+                                      </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+
+            <section>
+                <h3 id="constructor">Constructor</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>constructor(renderer: Renderer2, el: any)</code>
+                                </td>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+            </section>
 
             <section>
                 <h3 id="methods">Methods</h3>
@@ -432,139 +477,18 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier"></span> log</b>
+                                    <b> _getOrientation</b>
                                 </td>
                             </tr>
             
                             <tr>
                                 <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>log(args: any[])</code>
+            <code>_getOrientation(file: any, callback: any)</code>
                                 </td>
                             </tr>
             
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-description"><p>Write a log message. </p>
-            </div>
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> info</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>info(args: any[])</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>Write an information message. </p>
-            </div>
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> warn</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>warn(args: any[])</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>Write a warning message. </p>
-            </div>
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> error</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>error(args: any[])</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>Write an error message. </p>
-            </div>
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> debug</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>debug(args: any[])</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>Write a debug message. </p>
-            </div>
                                         <div class="io-description">
                                             <b>Returns: </b>    <code>void</code>
             
@@ -578,76 +502,143 @@
 
     </div>
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre><code class="hljs javascript">export abstract class NgxUploadLogger {
-    /** Write a log message. */
-    abstract log(...args: any[]): void;
-
-    /** Write an information message. */
-    abstract info(...args: any[]): void;
-
-    /** Write a warning message. */
-    abstract warn(...args: any[]): void;
-
-    /** Write an error message. */
-    abstract error(...args: any[]): void;
-
-    /** Write a debug message. */
-    abstract debug(...args: any[]): void;
-
-}
-
-const noop &#x3D; (): any &#x3D;&gt; undefined;
+        <pre><code class="hljs javascript">import { Directive, ElementRef, Input, OnInit, Renderer2 } from &#x27;@angular/core&#x27;;
+import { FileItem } from &#x27;../services/fileItem.model&#x27;;
 
 /**
- * Default implementation of Logger that safely writes the message into the console.
- *
+ * Transforms a node into a thumbnail zone.
  */
-export class ConsoleLogger implements NgxUploadLogger {
-    constructor(private _console: Console, private _debugEnabled &#x3D; true) {}
+@Directive({
+    selector: &#x27;[ngxThumbnail]&#x27;,
+    exportAs: &#x27;ngxThumbnail&#x27;
+})
+export class NgxThumbnailDirective implements OnInit {
 
-    log(...args: any[]): void { this._invokeConsoleMethod(&#x27;log&#x27;, args); }
+    @Input(&#x27;ngxThumbnail&#x27;) fileItem: FileItem;
 
-    info(...args: any[]): void { this._invokeConsoleMethod(&#x27;info&#x27;, args); }
+    constructor(private renderer: Renderer2, private el: ElementRef) { }
 
-    warn(...args: any[]): void { this._invokeConsoleMethod(&#x27;warn&#x27;, args); }
+    ngOnInit() {
+        // must be used only with image file
+        if (this.fileItem.file.type.indexOf(&#x27;image/jpeg&#x27;) !&#x3D;&#x3D; 0 &amp;&amp;
+            this.fileItem.file.type.indexOf(&#x27;image/png&#x27;) !&#x3D;&#x3D; 0) {
+            return
+        } else {
 
-    error(...args: any[]): void { this._invokeConsoleMethod(&#x27;error&#x27;, args); }
+            const imgEl &#x3D; this.renderer.createElement(&#x27;img&#x27;);
+            this.renderer.appendChild(this.el.nativeElement, imgEl);
+            this.renderer.setStyle(imgEl, &#x27;width&#x27;, &#x27;100px&#x27;);
 
-    debug(...args: any[]): void {
-        if (this._debugEnabled) { this._invokeConsoleMethod(&#x27;debug&#x27;, args); }
-    }
+            this._getOrientation(this.fileItem.file, (srcOrientation) &#x3D;&gt; {
 
-    private _invokeConsoleMethod(type: string, args?: any[]): void {
-        let logFn: Function &#x3D; (&lt;any&gt;this._console)[type] || this._console.log || noop;
+                const img &#x3D; new Image();
+                const reader &#x3D; new FileReader();
 
-        // console methods in IE9 don&#x27;t have &#x27;apply&#x27; method, polyfill it
-        if (!logFn.apply) {
-            logFn &#x3D; Function.prototype.bind.call(logFn, this._console);
+                reader.onload &#x3D; (evt) &#x3D;&gt; {
+
+                    img.onload &#x3D; () &#x3D;&gt; {
+                        const width &#x3D; img.width,
+                            height &#x3D; img.height,
+                            canvas &#x3D; document.createElement(&#x27;canvas&#x27;),
+                            ctx &#x3D; canvas.getContext(&#x27;2d&#x27;)!;
+
+                        // set proper canvas dimensions before transform &amp; export
+                        if (4 &lt; srcOrientation &amp;&amp; srcOrientation &lt; 9) {
+                            canvas.width &#x3D; height;
+                            canvas.height &#x3D; width;
+                        } else {
+                            canvas.width &#x3D; width;
+                            canvas.height &#x3D; height;
+                        }
+
+                        // transform context before drawing image
+                        switch (srcOrientation) {
+                            case 2:
+                                ctx.transform(-1, 0, 0, 1, width, 0);
+                                break;
+                            case 3:
+                                ctx.transform(-1, 0, 0, -1, width, height);
+                                break;
+                            case 4:
+                                ctx.transform(1, 0, 0, -1, 0, height);
+                                break;
+                            case 5:
+                                ctx.transform(0, 1, 1, 0, 0, 0);
+                                break;
+                            case 6:
+                                ctx.transform(0, 1, -1, 0, height, 0);
+                                break;
+                            case 7:
+                                ctx.transform(0, -1, -1, 0, height, width);
+                                break;
+                            case 8:
+                                ctx.transform(0, -1, 1, 0, 0, width);
+                                break;
+                            default:
+                                break;
+                        }
+
+                        // draw image
+                        ctx.drawImage(img, 0, 0);
+
+                        this.renderer.setProperty(imgEl, &#x27;src&#x27;, canvas.toDataURL());
+                    };
+
+                    img.src &#x3D; evt.target![&#x27;result&#x27;];
+                };
+                reader.readAsDataURL(this.fileItem.file);
+
+            });
         }
-
-        logFn.apply(this._console, args);
     }
-}
 
-/**
- * No op implementation of Logger.
- *
- */
-export class NoOpLogger implements NgxUploadLogger {
-    log(): void {}
+    /*
+    * getOrientation computes the real orientation of the image
+    *
+    */
+    _getOrientation(file, callback) {
+        const reader &#x3D; new FileReader();
+        reader.onload &#x3D; (event) &#x3D;&gt; {
 
-    info(): void {}
+            const view &#x3D; new DataView(event.target![&#x27;result&#x27;]);
 
-    warn(): void {}
+            if (view.getUint16(0, false) !&#x3D;&#x3D; 0xFFD8) return callback(-2);
 
-    error(): void {}
+            const length &#x3D; view.byteLength;
+            let offset &#x3D; 2;
 
-    debug(): void {}
+            while (offset &lt; length) {
+                const marker &#x3D; view.getUint16(offset, false);
+                offset +&#x3D; 2;
+
+                if (marker &#x3D;&#x3D;&#x3D; 0xFFE1) {
+                    if (view.getUint32(offset +&#x3D; 2, false) !&#x3D;&#x3D; 0x45786966) {
+                        return callback(-1);
+                    }
+                    const little &#x3D; view.getUint16(offset +&#x3D; 6, false) &#x3D;&#x3D;&#x3D; 0x4949;
+                    offset +&#x3D; view.getUint32(offset + 4, little);
+                    const tags &#x3D; view.getUint16(offset, little);
+                    offset +&#x3D; 2;
+
+                    for (let i &#x3D; 0; i &lt; tags; i++)
+                        if (view.getUint16(offset + (i * 12), little) &#x3D;&#x3D;&#x3D; 0x0112)
+                            return callback(view.getUint16(offset + (i * 12) + 8, little));
+                } else if ((marker &amp; 0xFF00) !&#x3D;&#x3D; 0xFF00) break;
+                else offset +&#x3D; view.getUint16(offset, false);
+            }
+            return callback(-1);
+        };
+        reader.readAsArrayBuffer(file.slice(0, 64 * 1024));
+    };
+
 
 }
 </code></pre>
     </div>
 </div>
+
+
+
 
 
 

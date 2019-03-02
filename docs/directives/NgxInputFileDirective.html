@@ -99,7 +99,7 @@
                                     <a href="../directives/NgxDragAndDropDirective.html" >NgxDragAndDropDirective</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../directives/NgxInputFileDirective.html" >NgxInputFileDirective</a>
+                                    <a href="../directives/NgxInputFileDirective.html"  class="active" >NgxInputFileDirective</a>
                                 </li>
                                 <li class="link">
                                     <a href="../directives/NgxThumbnailDirective.html" >NgxThumbnailDirective</a>
@@ -131,7 +131,7 @@
                                     <a href="../classes/NgxUploadLogger.html" >NgxUploadLogger</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../classes/NoOpLogger.html"  class="active" >NoOpLogger</a>
+                                    <a href="../classes/NoOpLogger.html" >NoOpLogger</a>
                                 </li>
                         </ul>
                     </li>
@@ -285,7 +285,7 @@
                                            <a href="../directives/NgxDragAndDropDirective.html" >NgxDragAndDropDirective</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../directives/NgxInputFileDirective.html" >NgxInputFileDirective</a>
+                                           <a href="../directives/NgxInputFileDirective.html"  class="active" >NgxInputFileDirective</a>
                                        </li>
                                        <li class="link">
                                            <a href="../directives/NgxThumbnailDirective.html" >NgxThumbnailDirective</a>
@@ -317,7 +317,7 @@
                                            <a href="../classes/NgxUploadLogger.html" >NgxUploadLogger</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../classes/NoOpLogger.html"  class="active" >NoOpLogger</a>
+                                           <a href="../classes/NoOpLogger.html" >NoOpLogger</a>
                                        </li>
                                </ul>
                            </li>
@@ -386,17 +386,14 @@
                    
                    </nav>
                </div>
-               <div class="content class">
+               <div class="content directive">
                    <div class="content-data">
 
 
 
-
-
-
 <ol class="breadcrumb">
-  <li>Classes</li>
-  <li>NoOpLogger</li>
+  <li>Directives</li>
+  <li>NgxInputFileDirective</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -414,161 +411,38 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/utils/logger.model.ts</code>
+            <code>src/directives/inputfile.directive.ts</code>
         </p>
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Simple service for logging the module.</p>
 
-            </p>
 
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">selector</td>
+                        <td class="col-md-9"><code>[ngxInputFile]</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
 
             <section>
-                <h3 id="methods">Methods</h3>
+                <h3 id="inputs">Inputs</h3>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> log</b>
+                                <td class="col-md-2">
+                                    <code>ngxInputFile</code>
                                 </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>log(args: any[])</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>Write a log message. </p>
-            </div>
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> info</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>info(args: any[])</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>Write an information message. </p>
-            </div>
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> warn</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>warn(args: any[])</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>Write a warning message. </p>
-            </div>
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> error</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>error(args: any[])</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>Write an error message. </p>
-            </div>
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                            <tr>
-                                <td class="col-md-4">
-                                    <b><span class="modifier"></span> debug</b>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play ">
-                                            <span class="fa fa-"></span>
-                                        </span>
-                                    <code>debug(args: any[])</code>
-                                </td>
-                            </tr>
-            
-                            <tr>
-                                <td class="col-md-4">
-                                        <div class="io-description"><p>Write a debug message. </p>
-            </div>
-                                        <div class="io-description">
-                                            <b>Returns: </b>    <code>void</code>
-            
-                                        </div>
+                                <td class="col-md-10">
+                                      <p>
+                                        <em>Type:</em>    <code>InputFileOptions</code>
+
+                                      </p>
                                 </td>
                             </tr>
                         </tbody>
@@ -576,78 +450,57 @@
             </section>
 
 
+            <section>
+                <h3 id="constructor">Constructor</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>constructor(resolver: <a href="https://angular.io/docs/ts/latest/api/core/index/ComponentFactoryResolver-class.html" target="_blank" >ComponentFactoryResolver</a>, injector: <a href="https://angular.io/docs/ts/latest/api/core/index/Injector-class.html" target="_blank" >Injector</a>, vcRef: <a href="https://angular.io/docs/ts/latest/api/core/index/ViewContainerRef-class.html" target="_blank" >ViewContainerRef</a>, templateRef: TemplateRef<any>)</code>
+                                </td>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+            </section>
+
+
+
     </div>
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre><code class="hljs javascript">export abstract class NgxUploadLogger {
-    /** Write a log message. */
-    abstract log(...args: any[]): void;
+        <pre><code class="hljs javascript">import {
+  ComponentFactoryResolver, ComponentRef, Directive, Injector, Input, OnInit, TemplateRef, ViewContainerRef
+} from &#x27;@angular/core&#x27;;
+import { InputfileComponent } from &#x27;../components/inputfile.component&#x27;;
+import { InputFileOptions, ngxInputFileOptions } from &#x27;../utils/configuration.model&#x27;;
 
-    /** Write an information message. */
-    abstract info(...args: any[]): void;
 
-    /** Write a warning message. */
-    abstract warn(...args: any[]): void;
+@Directive({
+  selector: &#x27;[ngxInputFile]&#x27;
+})
+export class NgxInputFileDirective implements OnInit {
 
-    /** Write an error message. */
-    abstract error(...args: any[]): void;
+  @Input()
+  ngxInputFile: InputFileOptions;
 
-    /** Write a debug message. */
-    abstract debug(...args: any[]): void;
+  constructor(private resolver: ComponentFactoryResolver, private injector: Injector,
+              private vcRef: ViewContainerRef, private templateRef: TemplateRef&lt;any&gt;) {
+  }
 
-}
-
-const noop &#x3D; (): any &#x3D;&gt; undefined;
-
-/**
- * Default implementation of Logger that safely writes the message into the console.
- *
- */
-export class ConsoleLogger implements NgxUploadLogger {
-    constructor(private _console: Console, private _debugEnabled &#x3D; true) {}
-
-    log(...args: any[]): void { this._invokeConsoleMethod(&#x27;log&#x27;, args); }
-
-    info(...args: any[]): void { this._invokeConsoleMethod(&#x27;info&#x27;, args); }
-
-    warn(...args: any[]): void { this._invokeConsoleMethod(&#x27;warn&#x27;, args); }
-
-    error(...args: any[]): void { this._invokeConsoleMethod(&#x27;error&#x27;, args); }
-
-    debug(...args: any[]): void {
-        if (this._debugEnabled) { this._invokeConsoleMethod(&#x27;debug&#x27;, args); }
-    }
-
-    private _invokeConsoleMethod(type: string, args?: any[]): void {
-        let logFn: Function &#x3D; (&lt;any&gt;this._console)[type] || this._console.log || noop;
-
-        // console methods in IE9 don&#x27;t have &#x27;apply&#x27; method, polyfill it
-        if (!logFn.apply) {
-            logFn &#x3D; Function.prototype.bind.call(logFn, this._console);
-        }
-
-        logFn.apply(this._console, args);
-    }
-}
-
-/**
- * No op implementation of Logger.
- *
- */
-export class NoOpLogger implements NgxUploadLogger {
-    log(): void {}
-
-    info(): void {}
-
-    warn(): void {}
-
-    error(): void {}
-
-    debug(): void {}
-
+  ngOnInit() {
+    const _contentViewRef &#x3D; this.templateRef.createEmbeddedView(null);
+    const factory &#x3D; this.resolver.resolveComponentFactory(InputfileComponent);
+    const component: ComponentRef&lt;InputfileComponent&gt; &#x3D; this.vcRef.createComponent(factory, 0, this.injector, [_contentViewRef.rootNodes]);
+    component.instance.options &#x3D; (this.ngxInputFile) ? this.ngxInputFile : ngxInputFileOptions;
+    _contentViewRef.detectChanges();
+  }
 }
 </code></pre>
     </div>
 </div>
+
+
+
 
 
 
