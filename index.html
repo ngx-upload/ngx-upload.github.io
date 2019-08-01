@@ -1,41 +1,16 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Angular 2 App</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-
+  <title>NgxUploaderIvy</title>
   <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
         integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script>
-    if (window.document.documentMode) {
-      var script = document.createElement('script');
-      script.src = 'js/ie-polyfills.bundle.js';
-      document.head.appendChild(script);
-    } else if (!Object.assign) {
-      // polyfill other non-evergreen browsers in a blocking way
-      var polyfillUrl = "https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find&flags=gated&unknown=polyfill";
-      // send a blocking XHR to fetch the polyfill
-      // then append it to the document so that its eval-ed synchronously
-      // this is required because the method used for IE is not reliable with other non-evergreen browsers
-      var xhr = new XMLHttpRequest();
-      xhr.addEventListener("load", function () {
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        var code = this.responseText;
-        s.appendChild(document.createTextNode(code));
-        document.head.appendChild(s);
-      });
-      xhr.open("GET", polyfillUrl, false);
-      xhr.send();
-    }
-  </script>
-
-<link href="main.1d34c72aef5bc0d2940c.css" rel="stylesheet"></head>
-
-
+<link rel="stylesheet" href="styles.e7c00b69cfdc100d313a.css"></head>
 <body>
-<app-root>Loading...</app-root>
-<script type="text/javascript" src="js/polyfills.1d34c72aef5bc0d2940c.js"></script><script type="text/javascript" src="js/main.1d34c72aef5bc0d2940c.js"></script></body>
+  <app-root></app-root>
+<script src="runtime-es2015.703a23e48ad83c851e49.js" type="module"></script><script src="polyfills-es2015.4d31cca2afc45cfd85b5.js" type="module"></script><script src="runtime-es5.465c2333d355155ec5f3.js" nomodule></script><script src="polyfills-es5.2219c87348e60efc0076.js" nomodule></script><script src="main-es2015.6acd6e733efe8422c110.js" type="module"></script><script src="main-es5.db71bf7418c796091107.js" nomodule></script></body>
 </html>
