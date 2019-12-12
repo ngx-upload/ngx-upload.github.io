@@ -11743,13 +11743,13 @@ class SimpleBootstrapComponent {
     upload(item) {
         item.upload({
             method: 'POST',
-            url: 'https://dev.whoppies.com:3000/api/auth/user/picture'
+            url: 'ngx_upload_mock'
         });
     }
     uploadAll() {
         this.uploader.uploadAll({
             method: 'POST',
-            url: 'https://dev.whoppies.com:3000/api/auth/user/picture'
+            url: 'ngx_upload_mock'
         }); //'http://localhost:8090/upload'
     }
     makeThumbnail(item) {
